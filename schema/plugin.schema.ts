@@ -8,6 +8,8 @@ export const ribbonSchema = z.union([z.null(), z.literal("new"), z.literal("tren
 
 export const tierSchema = z.enum(["free", "pro", "accelerator"]);
 
+export type Tier = z.infer<typeof tierSchema>;
+
 export const categorySchema = z.object({
   id: kebabCase,
   label: z.string().min(1),

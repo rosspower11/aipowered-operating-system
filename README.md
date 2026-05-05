@@ -17,7 +17,8 @@ aipowered-operating-system/
 │   ├── sales/          → Outbound, pipeline, discovery, closing
 │   ├── product/        → PRDs, research, roadmap, design
 │   ├── engineering/    → Code review, architecture, debugging
-│   └── operations/     → Meetings, comms, planning, hiring
+│   ├── operations/     → Meetings, comms, planning, hiring
+│   └── finance/        → Cashflow, taxes, investing, business finance
 ├── schema/             → Type definitions for plug-ins, skills, prompts
 ├── scripts/            → Validation tooling
 ├── .github/workflows/  → CI that validates content on every PR
@@ -82,17 +83,18 @@ Every skill and prompt starts with YAML frontmatter that the validator and dashb
 
 ```yaml
 ---
-id: cold-email-architect          # kebab-case, must match folder name
-title: Cold Email Architect       # display name
-type: skill                       # literal "skill"
-category: outbound                # must exist in plugin.json categories
-tags: [b2b, outbound, sequences]  # array of strings
-ribbon: trending                  # null | "new" | "trending"
-preview: A skill that writes…     # 1-sentence summary shown on cards
-version: 1.0.0                    # semver
-author: AI Powered                # who wrote it
-created: 2026-05-05               # ISO date
-updated: 2026-05-05               # ISO date
+id: aipowered-cold-email-architect   # kebab-case, prefixed with aipowered-, must match folder name
+title: Cold Email Architect          # display name
+type: skill                          # literal "skill"
+category: outbound                   # must exist in plugin.json categories
+tags: [b2b, outbound, sequences]     # array of strings
+ribbon: new                          # null | "new" | "trending"
+preview: A skill that writes…        # 1-sentence summary shown on cards
+tier: free                           # "free" | "pro" | "accelerator"
+version: 1.0.0                       # semver
+author: AI Powered                   # who wrote it
+created: 2026-05-05                  # ISO date
+updated: 2026-05-05                  # ISO date
 ---
 ```
 
@@ -137,15 +139,18 @@ The Vault is opinionated. Content should feel like it was written by a thoughtfu
 
 ## Tiers
 
-Each plug-in has a `tier` in its `plugin.json`:
+Tier gating happens at **two levels**:
+
+- **Plug-in tier** (`plugin.json` → `tier`) — the minimum tier required to see the plug-in card at all.
+- **Skill / prompt tier** (frontmatter → `tier`) — the minimum tier required to open that specific skill or prompt.
 
 | Tier | Who can use it | Notes |
 |---|---|---|
 | `free` | Anyone with a vault account | The acquisition surface |
-| `pro` | Paying subscribers | Future — once paid tier launches |
+| `pro` | Paying members | The depth of the toolkit lives here |
 | `accelerator` | AI Powered Accelerator members | Cohort-only |
 
-Today, all plug-ins are `free`. Tier gating is enforced by the dashboard, not this repo.
+Today, every plug-in is `free` (so all 6 cards are visible to everyone), and inside each plug-in we run a **3 free / 7 pro split** on skills — the 3 most foundational hook free users, the rest unlock with membership. Tier enforcement is the dashboard's job, not this repo's.
 
 ---
 

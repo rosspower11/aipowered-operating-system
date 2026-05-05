@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { kebabCase, ribbonSchema } from "./plugin.schema.js";
+import { kebabCase, ribbonSchema, tierSchema } from "./plugin.schema.js";
 
 const isoDate = z.preprocess((value) => {
   if (value instanceof Date) {
@@ -23,6 +23,7 @@ export const promptSchema = z.object({
   tags: z.array(z.string().min(1)),
   ribbon: ribbonSchema.optional(),
   preview: z.string().min(1),
+  tier: tierSchema,
   version: semver,
   author: z.string().min(1),
   created: isoDate,

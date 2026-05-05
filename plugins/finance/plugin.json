@@ -1,0 +1,15 @@
+{
+  "id": "finance",
+  "name": "Finance",
+  "description": "Plug-ins for personal and business money — budgets, taxes, investing, and the financial machinery of running a company.",
+  "icon": "wallet",
+  "ribbon": "new",
+  "categories": [
+    { "id": "cashflow", "label": "Cashflow" },
+    { "id": "taxes", "label": "Taxes" },
+    { "id": "investing", "label": "Investing" },
+    { "id": "business-finance", "label": "Business Finance" }
+  ],
+  "order": 6,
+  "tier": "free"
+}

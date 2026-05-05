@@ -34,19 +34,21 @@ If validation passes on a clean clone, you're good to go.
 
 ## Adding a prompt
 
-1. Pick the plug-in your prompt belongs in (`marketing`, `sales`, `product`, `engineering`, `operations`).
-2. Pick a kebab-case `id` for the prompt. Examples: `cold-email-architect`, `pricing-page-rewriter`. Keep it specific.
+1. Pick the plug-in your prompt belongs in (`marketing`, `sales`, `product`, `engineering`, `operations`, `finance`).
+2. Pick a kebab-case `id` for the prompt, **prefixed with `aipowered-`**. Examples: `aipowered-cold-email-architect`, `aipowered-pricing-page-rewriter`. Keep it specific.
 3. Create the file at `plugins/<plugin>/prompts/<id>.md`.
 4. Paste this template and fill it in:
 
 ```markdown
 ---
-id: your-prompt-id
+id: aipowered-your-prompt-id
 title: Your Prompt Title
 type: prompt
 category: one-of-the-plugin-categories
 tags: [tag1, tag2, tag3]
+ribbon: new
 preview: One sentence describing what this prompt does. Shown on cards.
+tier: free
 version: 1.0.0
 author: Your Name (or "AI Powered")
 created: 2026-05-05
@@ -77,18 +79,19 @@ I'll give you [inputs]. You'll [output].
 ## Adding a skill
 
 1. Pick the plug-in.
-2. Create a folder at `plugins/<plugin>/skills/<your-skill-id>/`. The folder name must equal the `id` in frontmatter.
+2. Create a folder at `plugins/<plugin>/skills/aipowered-<your-skill-id>/`. The folder name must equal the `id` in frontmatter, and every skill `id` must be prefixed with `aipowered-`.
 3. Inside it, create `SKILL.md`. Paste this template and fill it in:
 
 ```markdown
 ---
-id: your-skill-id
+id: aipowered-your-skill-id
 title: Your Skill Title
 type: skill
 category: one-of-the-plugin-categories
 tags: [tag1, tag2, tag3]
-ribbon: null   # or "new" or "trending"
+ribbon: new                # null | "new" | "trending"
 preview: One sentence describing the skill. Shown on cards.
+tier: free                 # "free" | "pro" | "accelerator"
 version: 1.0.0
 author: Your Name (or "AI Powered")
 created: 2026-05-05
