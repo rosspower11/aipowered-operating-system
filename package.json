@@ -1,0 +1,17 @@
+{
+  "name": "aipowered-operating-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Canonical content repository for AI Powered's plug-ins, skills, and prompts.",
+  "scripts": {
+    "validate": "tsx scripts/validate.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "fast-glob": "^3.3.0",
+    "gray-matter": "^4.0.3",
+    "tsx": "^4.0.0",
+    "typescript": "^5.5.0",
+    "zod": "^3.23.0"
+  }
+}

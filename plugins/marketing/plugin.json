@@ -1,0 +1,15 @@
+{
+  "id": "marketing",
+  "name": "Marketing",
+  "description": "Plug-ins to plan, write, and ship content that compounds — from SEO and social to brand and lifecycle.",
+  "icon": "megaphone",
+  "ribbon": null,
+  "categories": [
+    { "id": "content", "label": "Content" },
+    { "id": "seo", "label": "SEO" },
+    { "id": "social", "label": "Social" },
+    { "id": "brand", "label": "Brand" }
+  ],
+  "order": 1,
+  "tier": "free"
+}

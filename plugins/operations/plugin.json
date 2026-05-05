@@ -1,0 +1,15 @@
+{
+  "id": "operations",
+  "name": "Operations",
+  "description": "Plug-ins for the unsung work that keeps a company moving — meetings, comms, planning, and hiring.",
+  "icon": "settings",
+  "ribbon": null,
+  "categories": [
+    { "id": "meetings", "label": "Meetings" },
+    { "id": "comms", "label": "Comms" },
+    { "id": "planning", "label": "Planning" },
+    { "id": "hiring", "label": "Hiring" }
+  ],
+  "order": 5,
+  "tier": "free"
+}

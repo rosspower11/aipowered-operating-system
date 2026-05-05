@@ -1,0 +1,15 @@
+{
+  "id": "product",
+  "name": "Product",
+  "description": "Plug-ins to ship better products faster — from research and PRDs to roadmap and design critique.",
+  "icon": "layers",
+  "ribbon": null,
+  "categories": [
+    { "id": "research", "label": "Research" },
+    { "id": "specs", "label": "Specs" },
+    { "id": "roadmap", "label": "Roadmap" },
+    { "id": "design", "label": "Design" }
+  ],
+  "order": 3,
+  "tier": "free"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "sales",
+  "name": "Sales",
+  "description": "Plug-ins to run outbound, manage pipeline, and close more deals — without losing your voice.",
+  "icon": "trending-up",
+  "ribbon": null,
+  "categories": [
+    { "id": "outbound", "label": "Outbound" },
+    { "id": "pipeline", "label": "Pipeline" },
+    { "id": "discovery", "label": "Discovery" },
+    { "id": "closing", "label": "Closing" }
+  ],
+  "order": 2,
+  "tier": "free"
+}

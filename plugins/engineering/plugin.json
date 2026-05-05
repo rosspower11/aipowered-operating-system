@@ -1,0 +1,15 @@
+{
+  "id": "engineering",
+  "name": "Engineering",
+  "description": "Plug-ins to ship code with judgement — review, explain, debug, and document without grinding the team.",
+  "icon": "code",
+  "ribbon": null,
+  "categories": [
+    { "id": "review", "label": "Review" },
+    { "id": "architecture", "label": "Architecture" },
+    { "id": "debugging", "label": "Debugging" },
+    { "id": "docs", "label": "Docs" }
+  ],
+  "order": 4,
+  "tier": "free"
+}
