@@ -1,0 +1,11 @@
+{
+  "id": "voice-dna-builder",
+  "plugin": "marketing",
+  "title": "Voice DNA Builder",
+  "notionName": "Get the voice DNA skill",
+  "tag": "Content",
+  "campaign": "15 Skills In 15 days",
+  "version": 1,
+  "dryRun": true,
+  "skipNotion": true
+}

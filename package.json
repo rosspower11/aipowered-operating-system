@@ -4,7 +4,9 @@
   "private": true,
   "description": "Canonical content repository for AI Powered's plug-ins, skills, and prompts.",
   "scripts": {
-    "validate": "tsx scripts/validate.ts"
+    "validate": "tsx scripts/validate.ts",
+    "publish-skill": "tsx scripts/publish-skill.ts",
+    "harness:publish": "tsx scripts/harness-publish.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
